@@ -6,13 +6,18 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>CSS Avancé</h1>
+        <h1>Formulaire</h1>
         <form method="post" action="traitement.php">
-            <label for="prenom">Entrez votre ^renom</label>
-            <input type="text" id="prenom" name="prenom"><br>
+        <fieldset id="section1">
+            <legend>Informations personnelles</legend>
+            <label for="prenom">Entrez votre prenom</label>
+            <input type="text" id="prenom" name="prenom" placeholder="ex: Kévin"><br>
 
-            <label for="pass">Entre un mot de passe</label>
-            <input type="password" id="pass" name="pass"> <br>
+            <label for="nom">Entrez votre nom</label>
+            <input type="text" name="nom" id="nom" autofocus="autofocus"><br>
+
+            <label for="pseudo">Choisissez un pseudo</label>
+            <input type="text" id="pseudo" name="pseudo"> <br>
 
             <label for="naissance">Votre date de naissance</label>
             <input type="date" id="naissance" name="naissance"><br>
@@ -25,32 +30,25 @@
 
             <label for="tel">Entrez un numero</label>
             <input type="number" id="tel" name="numero"><br>
+        </fieldset>
 
-            Homme et femme ? <br>
-
-            <input type="radio" id="homme" name="sexe" value="homme">
-            <label for="homme">Un homme</label><br>
-            <input type="radio" id="femme" name="sexe" value="femme">
-            <label for="femme">Une femme</label><br><br>
-
-            Majeur ou mineur ? <br>
-            <input type="radio" id="mineur" name="age" value="mineur">
-            <label for="mineur">Mineur</label><br>
-            <input type="radio" id="mineur" name="age" value="majeur">
-            <label for="majeur">Majeur</label><br><br>
-
-            Quel sport pratiquez vous ? <br>
+        <fieldset id="section2">
+            <legend>Informations suplémentaire</legend>
+            Quel(s) sport pratiquez vous ? <br>
             <input type="checkbox" name="sport" value="natation" id="natation">
             <label for="natation">Natation</label><br>
             <input type="checkbox" name="sport" value="course" id="course">
             <label for="course">Course a pied</label><br>
             <input type="checkbox" name="sport" value="velo" id="velo">
             <label for="velo">Vélo</label><br><br>
+        </fieldset>
 
+        <fieldset id="section3">
+            <legend>Informations cruciale</legend>
             Ou habitez vous ? <br>
             <select name="pays">
                 <optgroup label="Europe">
-                <option value="france">France</option>
+                <option value="france" selected="selected">France</option>
                 <option value="Belgique">Belgique</option>
                 <optgroup label="AmériqUE">
                 <option value="Canada">Canada</option>
@@ -58,10 +56,11 @@
                 <option value="Espagne">Espagne</option>
             </optgroup>
             </select><br><br>
-
-            <label for="prez" >Une petite presenntation de vous las bas</label>
+            
+            <label for="prez" >Une petite présentation de vous</label>
             <textarea id="prez" name="presentation"></textarea><br>
 
+        </fieldset>
             
 
             <input type="submit" value="Envoyer">
